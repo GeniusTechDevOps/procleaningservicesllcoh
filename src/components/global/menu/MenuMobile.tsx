@@ -14,7 +14,7 @@ const MenuMobile: React.FunctionComponent<MenuMobileProps> = ({
   const city = data?.dataGeneral?.location?.[0]?.city ?? "Serving your area";
   const primaryPhone = data?.dataGeneral?.phones?.[0]?.number;
   const reviewsEnabled = data?.reviews?.stateReviews && data?.reviews?.viewAll;
-  const blogEnabled = (data as any)?.widgets?.blog && (data as any)?.blog?.blog;
+  const blogEnabled = data?.widgets?.blog;
 
   const routes = useMemo(
     () =>
