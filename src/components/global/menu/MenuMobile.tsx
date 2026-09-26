@@ -26,7 +26,7 @@ const MenuMobile: React.FunctionComponent<MenuMobileProps> = ({
         { name: "Reviews", path: "/reviews", visible: Boolean(reviewsEnabled) },
         { name: "Resources", path: "/resources", visible: false },
         { name: "Local Profile", path: "/local-profile", visible: false },
-        { name: "Blog", path: "/blog", visible: Boolean(blogEnabled) },
+        { name: "Blog", path: "/blog", visible: true },
         { name: "Contact", path: "/contact", visible: true },
       ].filter((route) => route.visible),
     [blogEnabled, reviewsEnabled],
