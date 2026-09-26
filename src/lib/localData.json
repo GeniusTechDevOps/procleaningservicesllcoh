@@ -1,0 +1,496 @@
+{
+  "logos": {
+    "primary": "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/galleryClientes%2FCTZceN1DllR9MKT75VZs%2FfotosCliente%2FGTD-Tree%20Services-WH-5349.webp?alt=media&token=5cb2afba-e5d0-4e62-8d02-e6f35fc29221",
+    "secondary": "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/galleryClientes%2FCTZceN1DllR9MKT75VZs%2FfotosCliente%2FGTD-Tree%20Services-WH-5349.webp?alt=media&token=5cb2afba-e5d0-4e62-8d02-e6f35fc29221",
+    "favicon": "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/galleryClientes%2FCTZceN1DllR9MKT75VZs%2FfotosCliente%2FGTD-Tree%20Services-REDES-1675.webp?alt=media&token=c81a6ebd-d21a-4029-b0c1-9ba6f4877efa"
+  },
+  "dataGeneral": {
+    "phones": [
+      {
+        "title": "Principal",
+        "number": "856-777-9520",
+        "_id": "67c8a7da1b23dcb387ebebeb"
+      }
+    ],
+    "location": [
+      {
+        "city": "San Francisco, CA",
+        "urlCity": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100940.14245968233!2d-122.43759999999999!3d37.75769999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20California%2C%20EE.%20UU.!5e0!3m2!1ses!2sni!4v1750096256804!5m2!1ses!2sni",
+        "_id": "67f6a703723aa2236c9e941b"
+      },
+      {
+        "city": "San Francisco, CA",
+        "urlCity": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50000!2d-122.4194155-122.3482-122.527!3d37.774929537.812\n37.70339999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1sChIJIQBpAG2ahYAR_6128GcTUEo!2sSan Francisco%2C%20CA!5e0!3m2!1sen!2us!4v1740151242",
+        "_id": "685059e74b7e4b0e70a70b80"
+      },
+      {
+        "city": "South San Francisco, CA",
+        "urlCity": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50000!2d-122.4077498-122.2205311-122.471864!3d37.65465637.673326\n37.633916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1sChIJ7-z-QwV5j4ARXTNW53l1Ovg!2sSouth San Francisco%2C%20CA!5e0!3m2!1sen!2us!4v1740151897",
+        "_id": "69387205e68e2ef73226e377"
+      },
+      {
+        "city": "Sacramento, CA",
+        "urlCity": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50000!2d-121.4944209-121.362822-121.5606561!3d38.578134238.68560859999999\n38.4379091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1sChIJ-ZeDsnLGmoAR238ZdKpqH5I!2sSacramento%2C%20CA!5e0!3m2!1sen!2us!4v1740151254",
+        "_id": "69387205e68e2ef73226e378"
+      },
+      {
+        "city": "San Pablo, CA",
+        "urlCity": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50000!2d-122.3455263-122.318418-122.358608!3d37.962145737.9815579\n37.94907389999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1sChIJcU50YSpnhYARea-g6bdYEAc!2sSan Pablo%2C%20CA!5e0!3m2!1sen!2us!4v1740152497",
+        "_id": "69387205e68e2ef73226e379"
+      }
+    ],
+    "emails": [
+      {
+        "title": "Default Title",
+        "email": "geniusdesarrollo@gmail.com",
+        "_id": "67c8a7da1b23dcb387ebebec"
+      }
+    ],
+    "openingHours": [
+      {
+        "days": "Monday - Sunday",
+        "hours": "Available 24 Hours",
+        "_id": "695c21c73c1e571517de7d86"
+      }
+    ]
+  },
+  "valuesContent": {
+    "mission": "Empowering individuals and businesses through innovative tree care solutions, we prioritize health, safety, and exceptional service. Our commitment to enhancing the vitality of your outdoor spaces ensures that you can enjoy a thriving environment while maintaining peace of mind.",
+    "vision": "Innovating tree care through strategic excellence, we envision a future where sustainable solutions enhance the health of our communities and the environment. Our commitment to advanced techniques and customer satisfaction drives us to set new standards in tree management.",
+    "whychooseUs": "Choose our tree services for comprehensive solutions that ensure the health and safety of your trees. Our extensive expertise in tree health, emergency services, stump grinding, and trimming guarantees prompt and professional care tailored to your needs. We leverage advanced techniques and equipment to deliver exceptional results.",
+    "additionalImages": [
+      "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/Stock%2FTree%20Services%2FTree%20Pruning-4043.webp?alt=media&token=7b265607-6a01-4b53-9380-d0d555e4d7ed",
+      "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/Stock%2FTree%20Services%2FTree%20Pruning%20(1).jpg?alt=media&token=6cf8c28f-020a-4723-bdda-39b9df208aa8",
+      "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/Stock%2FTree%20Services%2FTree%20Trimming.webp?alt=media&token=f7b9a088-3016-49af-ab0c-10ffc9ce132a"
+    ]
+  },
+  "widgets": {
+    "ada": false,
+    "localSEO": false,
+    "btnWhatsapp": true,
+    "counterVisit": true,
+    "weatherViewer": false,
+    "onePages": false,
+    "btnCallUs": true,
+    "colorPalette": true,
+    "landingGallery": true,
+    "landingServices": true,
+    "landingVideos": false,
+    "formReviews": true,
+    "beforeAfter": false,
+    "underConstrution": false,
+    "siteDown": false,
+    "popup": false,
+    "blog": true,
+    "areasweserve": true,
+    "videoAnimado": false,
+    "videoConModelo": false,
+    "estimadoVirtual": false,
+    "englishEspanol": false,
+    "post": false
+  },
+  "reviews": {
+    "stateReviews": false,
+    "viewHome": false,
+    "viewAll": false,
+    "urlReviews": ""
+  },
+  "robBot": {
+    "stateRobBot": false,
+    "urlRobBot": ""
+  },
+  "colors": {
+    "primaryColor": "#26aa1d",
+    "secondaryColor": "#06650c",
+    "tertiaryColor": "#48a914",
+    "fourthColor": "#FFFF00",
+    "titleColor": "#333333",
+    "textColor": "#666666",
+    "btnColor": "#277c48",
+    "btnHoverColor": "#176334"
+  },
+  "_id": "CTZceN1DllR9MKT75VZs",
+  "nameCustomers": "Genius Tree Services LLC",
+  "name": "Genius Tree Services LLC",
+  "businessAddress": "San Francisco, CA 94103-4650",
+  "accountAddress": "San Francisco, CA 94103-4650",
+  "domain": "gtd-portfolio.netlify.app",
+  "businessLicense": "No",
+  "yearsExperience": "10",
+  "milesCover": "50",
+  "estimateFree": "",
+  "languages": "",
+  "methodsPayment": "We Accept Cash & Checks",
+  "gmb": "www.google.com",
+  "existingWebsite": "No",
+  "sectionsHomeAbout": [
+    {
+      "_id": "67c8a7da1b23dcb387ebebee",
+      "section": "home",
+      "title": "Transform Your Space with Professional Care",
+      "text": "Elevate your outdoor space with professional tree care that promotes health and safety. Our extensive expertise in tree trimming, removal, and emergency services ensures your property remains beautiful and hazard-free. Experience exceptional stump grinding and removal for a clean, polished landscape. Transform your environment today with our dedicated services.",
+      "tipos": "Segundo Block Home",
+      "list": [],
+      "additionalImages": [
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/Stock%2FTree%20Services%2FTree%20Pruning-4043.webp?alt=media&token=7b265607-6a01-4b53-9380-d0d555e4d7ed",
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/Stock%2FTree%20Services%2FTree%20Pruning%20(1).jpg?alt=media&token=6cf8c28f-020a-4723-bdda-39b9df208aa8",
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/Stock%2FTree%20Services%2FTree%20Trimming.webp?alt=media&token=f7b9a088-3016-49af-ab0c-10ffc9ce132a"
+      ]
+    },
+    {
+      "_id": "67c8a7da1b23dcb387ebebef",
+      "section": "about",
+      "title": "Making Space, Removing Waste, Safely Done.",
+      "text": "Transform your landscape with our expert tree services. Our skilled team excels in tree health, emergency response, stump grinding, trimming, and removal, delivering results that enhance both safety and beauty. Count on us to create a space that reflects your vision while ensuring the utmost care for your property.",
+      "tipos": "Primer Block About",
+      "list": [],
+      "additionalImages": [
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/Stock%2FTree%20Services%2Farborista-cortando-arbol-motosierra.jpg?alt=media&token=2bc3f3c0-8781-4150-907e-a9c90f6e1798",
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/Stock%2FTree%20Services%2FTree-Services3.jpg?alt=media&token=68919b73-8551-44a0-9b5c-b84617bc67d9",
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/Stock%2FTree%20Services%2Ftree-services-3.webp?alt=media&token=856e29cd-851e-4de1-b615-cc3e75a2144f"
+      ]
+    },
+    {
+      "_id": "67c8a7da1b23dcb387ebebf0",
+      "section": "about",
+      "title": "Tree Care You Can Trust.",
+      "text": "Enhance your property with reliable tree care from a dedicated team. Our extensive expertise in tree health, emergency services, stump grinding, trimming, and removal guarantees safe and effective solutions tailored to your needs. Trust us to maintain the beauty and health of your landscape while prioritizing quality and professionalism in every service we provide. Experience the peace of mind that comes with expert tree care you can rely on.",
+      "tipos": "Segundo Block About",
+      "list": [],
+      "additionalImages": [
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/Stock%2FTree%20Services%2FTree%20removal-2191.webp?alt=media&token=3a94e6cd-a087-41f1-aa33-6b165c4c57bb",
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/Stock%2FTree%20Services%2FTree%20services%20(2).jpg?alt=media&token=4019cfe9-9e37-40c1-8156-67544f8dd3a9",
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/Stock%2FTree%20Services%2Ftree-services-2.webp?alt=media&token=044bf2e0-c1ae-4f06-bf61-d6e52a1d10bb"
+      ]
+    },
+    {
+      "_id": "67c8a7da1b23dcb387ebebf1",
+      "section": "blocks",
+      "title": "The Trusted Experts in Safe Tree Removal and Complete Landscape Care.",
+      "text": "Enhance your outdoor space with expertly executed tree care solutions designed to promote health and safety. Our team specializes in tree trimming, removal, stump grinding, and 24/7 emergency services, ensuring your landscape remains beautiful and secure.",
+      "tipos": "slideshow",
+      "list": [],
+      "additionalImages": [
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/Stock%2FTree%20Services%2FHedge%20Services-2.webp?alt=media&token=6d3c6823-9a9b-40e7-9ae7-45255fe1c00a",
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/Stock%2FTree%20Services%2Ftree-services.webp?alt=media&token=137907d9-8268-4e2f-a087-f67a308b67ef",
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/Stock%2FTree%20Services%2Ftree-cutting.jpg?alt=media&token=7271f20c-cdc5-4546-8035-39c19fdb468b",
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/Stock%2FTree%20Services%2FTree%20Pruning-4043.webp?alt=media&token=7b265607-6a01-4b53-9380-d0d555e4d7ed"
+      ]
+    },
+    {
+      "_id": "67c8a7da1b23dcb387ebebf2",
+      "section": "blocks",
+      "title": "About",
+      "text": "Unlock optimal tree health and safety with our expert services. Our team provides round-the-clock emergency tree care, precise trimming, and efficient stump grinding and removal. Trust us for comprehensive tree health assessments and professional tree removal, ensuring your landscape remains safe and beautiful. Experience unparalleled service that keeps your property thriving.",
+      "tipos": "Header About",
+      "list": [],
+      "additionalImages": [
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/Stock%2FTree%20Services%2FTree%20Trimming.webp?alt=media&token=f7b9a088-3016-49af-ab0c-10ffc9ce132a"
+      ]
+    },
+    {
+      "_id": "67c8a7da1b23dcb387ebebf3",
+      "section": "blocks",
+      "title": "Services",
+      "text": "Transform your landscape with our comprehensive tree services, designed to enhance the health and beauty of your property. From 24/7 emergency tree services to meticulous tree trimming and efficient stump grinding, our team is equipped to meet all your tree care needs. Ensure your environment thrives with our expert tree removal and maintenance solutions. Contact us to discover how we can elevate your outdoor space.",
+      "tipos": "Header Services",
+      "list": [],
+      "additionalImages": [
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/Stock%2FTree%20Services%2FHedge%20Services.webp?alt=media&token=b5782187-6d48-4694-a346-e49ff5b24271"
+      ]
+    },
+    {
+      "_id": "67c8a7da1b23dcb387ebebf4",
+      "section": "blocks",
+      "title": "Gallery",
+      "text": "Explore our stunning gallery showcasing innovative tree services. Our team utilizes advanced techniques to enhance tree health, manage emergencies, and efficiently remove trees and stumps. View our completed projects to see how we elevate landscapes and promote safety in every environment.",
+      "tipos": "Header Gallery",
+      "list": [],
+      "additionalImages": [
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/Stock%2FTree%20Services%2F360_F_412984025_lpLc9jKcxtkqHYmWqn44DdHfMqah1gWc.webp?alt=media&token=c0e3e5f7-c25e-4bf5-9d76-760e234534f6"
+      ]
+    },
+    {
+      "_id": "67c8a7da1b23dcb387ebebf5",
+      "section": "blocks",
+      "title": "Contact",
+      "text": "Reach out for expert tree care solutions tailored to your needs. Our dedicated team is prepared to assist you with services like tree health assessments, emergency tree support, stump grinding, and more. Contact us now to discover how we can enhance the beauty and safety of your landscape.",
+      "tipos": "Header Contact",
+      "list": [],
+      "additionalImages": [
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/Stock%2FTree%20Services%2FTree%20removal-2-3063.webp?alt=media&token=78ff0736-f74f-4cc4-8e78-3d88f7097175"
+      ]
+    },
+    {
+      "_id": "67c8a7da1b23dcb387ebebf6",
+      "section": "blocks",
+      "title": "Our Reviews",
+      "text": "Discover why our clients in San Francisco, CA trust Genius Tech Development for innovative and reliable solutions. Read our reviews and see how we can help take your business to the next level. Contact us today for a consultation.",
+      "tipos": "Header Reviews",
+      "list": [],
+      "additionalImages": []
+    },
+    {
+      "_id": "67c8a7da1b23dcb387ebebf7",
+      "section": "blocks",
+      "title": "Our Videos",
+      "text": "Explore our innovative tech solutions and cutting-edge projects through our video library at Genius Tech Development. Based in the bustling city of San Francisco, CA, our videos showcase our expertise and drive for innovation. Discover the future of technology with us. #GeniusTechDevelopment #SanFrancisco #TechSolutions",
+      "tipos": "Header Videos",
+      "list": [],
+      "additionalImages": []
+    },
+    {
+      "_id": "67c8a7da1b23dcb387ebebf8",
+      "section": "blocks",
+      "title": "Blogs",
+      "text": "Stay updated with the latest tech trends and developments in San Francisco, CA with Genius Tech Development's informative blogs. Our expert team shares valuable insights and tips to help businesses thrive in the ever-evolving digital landscape. Discover game-changing strategies and stay ahead of the competition. Browse our blog section now.",
+      "tipos": "Header Blogs",
+      "list": [],
+      "additionalImages": []
+    },
+    {
+      "_id": "696527eddbd02a25cab05957",
+      "section": "blocks",
+      "title": "Emblema",
+      "text": "Emblema",
+      "tipos": "Emblema",
+      "list": [],
+      "additionalImages": [
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/galleryClientes%2FCTZceN1DllR9MKT75VZs%2FfotosCliente%2F23-4047.webp?alt=media&token=7d027341-6a94-4aae-9d77-ba052d86ca76",
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/galleryClientes%2FCTZceN1DllR9MKT75VZs%2FfotosCliente%2Fimage%20(1)-3365.webp?alt=media&token=dba0e548-f66e-4cb2-810d-6416b60b6546"
+      ]
+    },
+    {
+      "_id": "698ce98f0f7f9bcaaea7019d",
+      "section": "blocks",
+      "title": "Catalogo",
+      "text": "Catalogo",
+      "tipos": "Catalogo",
+      "list": [],
+      "additionalImages": [
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/galleryClientes%2FCTZceN1DllR9MKT75VZs%2FfotosCliente%2Fmenu-01-3474.webp?alt=media&token=dbcd30e0-956f-4926-bb67-3da8bca488b2",
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/galleryClientes%2FCTZceN1DllR9MKT75VZs%2FfotosCliente%2Fmenu-02-7685.webp?alt=media&token=dbf44e4a-5738-4aff-8222-6923c5251c12",
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/galleryClientes%2FCTZceN1DllR9MKT75VZs%2FfotosCliente%2Fmenu-03-5479.webp?alt=media&token=3755fad5-d700-44cd-a6c2-def2071819d6",
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/galleryClientes%2FCTZceN1DllR9MKT75VZs%2FfotosCliente%2Fmenu-04-5050.webp?alt=media&token=118127d0-8310-4389-be26-e371bb7f43c3",
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/galleryClientes%2FCTZceN1DllR9MKT75VZs%2FfotosCliente%2Fmenu-05-9248.webp?alt=media&token=f8dd9269-43a8-4af2-97ba-4ded971f8ea2",
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/galleryClientes%2FCTZceN1DllR9MKT75VZs%2FfotosCliente%2Fmenu-06-6443.webp?alt=media&token=6a14aaa1-9998-44e6-9ff2-ac1222e02d2d",
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/galleryClientes%2FCTZceN1DllR9MKT75VZs%2FfotosCliente%2Fmenu-07-901.webp?alt=media&token=a3c74e8a-4f8e-445e-b20a-4a0aac9538da",
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/galleryClientes%2FCTZceN1DllR9MKT75VZs%2FfotosCliente%2F2-3384.webp?alt=media&token=0dd66d80-7c2e-4ad6-91fc-755fbffd9ef6",
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/galleryClientes%2FCTZceN1DllR9MKT75VZs%2FfotosCliente%2FFlyer%20Organizador%20de%20Eventos%20Bodas%20Natural%20Femenino%20Rosa%20(1)-4913.webp?alt=media&token=a8bb7b68-78a5-4760-ad55-ebbf6fd1e37c"
+      ]
+    },
+    {
+      "_id": "6a0b36bbb53cbe7193b8e5d7",
+      "section": "home",
+      "title": "Taking Down Trees Safely, Leaving Spaces Clean.",
+      "text": "Safely remove unwanted trees while maintaining a clean environment. Our team specializes in tree health, 24/7 emergency services, stump grinding, trimming, and removal. With extensive expertise, we ensure every job is executed with precision and care, leaving your space neat and safe. Trust us to enhance your property's beauty and safety through professional tree management.",
+      "tipos": "Primer Block Home",
+      "list": [],
+      "additionalImages": [
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/Stock%2FTree%20Services%2FTree%20removal-2-3063.webp?alt=media&token=78ff0736-f74f-4cc4-8e78-3d88f7097175",
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/Stock%2FTree%20Services%2FTree%20services%20(1).jpg?alt=media&token=db14da6f-a1e9-4714-8ab5-8338b85d0d69",
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/Stock%2FTree%20Services%2F360_F_412984025_lpLc9jKcxtkqHYmWqn44DdHfMqah1gWc.webp?alt=media&token=c0e3e5f7-c25e-4bf5-9d76-760e234534f6"
+      ]
+    }
+  ],
+  "services": [
+    {
+      "_id": "6a0b7fe85eac64439f7951ff",
+      "title": "Tree Health",
+      "subtitle": "",
+      "showtitletext": true,
+      "description": [
+        {
+          "image": "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/Stock%2FTree%20Services%2FHedge%20Services-2.webp?alt=media&token=6d3c6823-9a9b-40e7-9ae7-45255fe1c00a",
+          "titletext": "",
+          "precio": "",
+          "text": "Enhance the vitality of your trees with our comprehensive tree health services. Our team utilizes advanced techniques and knowledge to assess and treat various tree ailments, ensuring robust growth and longevity. Trust us to revitalize your landscape, promoting healthier foliage and preventing future issues.",
+          "tipoImages": "stock",
+          "_id": "6a0b7fe85eac64439f795200"
+        }
+      ]
+    },
+    {
+      "_id": "6a0b7fe85eac64439f795201",
+      "title": "24/7 Emergency Tree Services",
+      "subtitle": "",
+      "showtitletext": true,
+      "description": [
+        {
+          "image": "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/Stock%2FTree%20Services%2FBrush%20Removal-1-815.webp?alt=media&token=81700e8d-1e36-455e-bd3f-5400f12f8970",
+          "titletext": "",
+          "precio": "",
+          "text": "Count on our 24/7 emergency tree services to handle urgent tree hazards efficiently and safely. Whether it's a fallen tree blocking your driveway or a hazardous limb threatening your property, our skilled team is equipped to respond at any hour. We prioritize your safety and peace of mind, ensuring swift and thorough solutions to protect your home and landscape.",
+          "tipoImages": "stock",
+          "_id": "6a0b7fe85eac64439f795202"
+        }
+      ]
+    },
+    {
+      "_id": "6a0b7fe85eac64439f795203",
+      "title": "Stump Grinding & Removal",
+      "subtitle": "",
+      "showtitletext": true,
+      "description": [
+        {
+          "image": "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/Stock%2FTree%20Services%2F360_F_412984025_lpLc9jKcxtkqHYmWqn44DdHfMqah1gWc.webp?alt=media&token=c0e3e5f7-c25e-4bf5-9d76-760e234534f6",
+          "titletext": "",
+          "precio": "",
+          "text": "Experience the advantage of expert stump grinding and removal services that eliminate unsightly stumps while enhancing your landscape's appearance. Our team utilizes advanced equipment to ensure efficient and thorough removal, promoting healthier growth for surrounding plants and improving overall property value. Trust us to restore your outdoor space to its full potential.",
+          "tipoImages": "stock",
+          "_id": "6a0b7fe85eac64439f795204"
+        }
+      ]
+    },
+    {
+      "_id": "6a0b7fe85eac64439f795205",
+      "title": "Tree Trimming",
+      "subtitle": "",
+      "showtitletext": true,
+      "description": [
+        {
+          "image": "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/Stock%2FTree%20Services%2FTree%20Pruning%20(1).jpg?alt=media&token=6cf8c28f-020a-4723-bdda-39b9df208aa8",
+          "titletext": "",
+          "precio": "",
+          "text": "Enhance the health and appearance of your trees with our expert tree trimming services. Our team carefully removes dead or overgrown branches, promoting stronger growth and improving the overall aesthetics of your landscape. Trust us to maintain the beauty and safety of your property while ensuring your trees thrive.",
+          "tipoImages": "stock",
+          "_id": "6a0b7fe85eac64439f795206"
+        }
+      ]
+    },
+    {
+      "_id": "6a0b7fe85eac64439f795207",
+      "title": "Tree Removal",
+      "subtitle": "",
+      "showtitletext": true,
+      "description": [
+        {
+          "image": "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/Stock%2FTree%20Services%2FTree%20removal-2-3063.webp?alt=media&token=78ff0736-f74f-4cc4-8e78-3d88f7097175",
+          "titletext": "",
+          "precio": "",
+          "text": "Ensure the safety and aesthetics of your property with expert tree removal services. Our team utilizes advanced techniques to efficiently eliminate hazardous or unwanted trees, promoting healthier landscapes and enhancing curb appeal. Trust in our extensive expertise to handle your tree removal needs with professionalism and care.",
+          "tipoImages": "stock",
+          "_id": "6a0b7fe85eac64439f795208"
+        }
+      ]
+    }
+  ],
+  "gallery": [
+    "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/Stock%2FTree%20Services%2F360_F_412984025_lpLc9jKcxtkqHYmWqn44DdHfMqah1gWc.webp?alt=media&token=c0e3e5f7-c25e-4bf5-9d76-760e234534f6",
+    "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/Stock%2FTree%20Services%2FTree%20Pruning%20(1).jpg?alt=media&token=6cf8c28f-020a-4723-bdda-39b9df208aa8",
+    "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/Stock%2FTree%20Services%2FTree%20Pruning-4043.webp?alt=media&token=7b265607-6a01-4b53-9380-d0d555e4d7ed",
+    "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/Stock%2FTree%20Services%2FTree%20removal-2-3063.webp?alt=media&token=78ff0736-f74f-4cc4-8e78-3d88f7097175",
+    "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/Stock%2FTree%20Services%2FTree%20services%20(1).jpg?alt=media&token=db14da6f-a1e9-4714-8ab5-8338b85d0d69",
+    "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/Stock%2FTree%20Services%2FTree%20serv%20(3).jpg?alt=media&token=7cb1ed57-9261-4a5b-8c38-3f9a1f3dd5f2",
+    "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/Stock%2FTree%20Services%2FTree%20S%20(2).webp?alt=media&token=07f6e181-e865-4974-b768-52efb1e65264",
+    "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/Stock%2FTree%20Services%2FBrush%20Removal-1-815.webp?alt=media&token=81700e8d-1e36-455e-bd3f-5400f12f8970",
+    "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/Stock%2FTree%20Services%2Farborista-cortando-arbol-motosierra.jpg?alt=media&token=2bc3f3c0-8781-4150-907e-a9c90f6e1798"
+  ],
+  "landingsGallery": [
+    {
+      "_id": "6965269ddbd02a25caaf9e95",
+      "nameLanding": "Services 1",
+      "imgLanding": [
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/galleryClientes%2FCTZceN1DllR9MKT75VZs%2FfotosCliente%2F14636.webp?alt=media&token=497f4612-04bd-4c34-b141-3c06d56337c8",
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/galleryClientes%2FCTZceN1DllR9MKT75VZs%2FfotosCliente%2F17755.webp?alt=media&token=83678d9d-b6b4-4952-adab-d88bdb125e80",
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/galleryClientes%2FCTZceN1DllR9MKT75VZs%2FfotosCliente%2F194.webp?alt=media&token=7f0ed992-846c-4bda-b484-0f7231ad14b2",
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/galleryClientes%2FCTZceN1DllR9MKT75VZs%2FfotosCliente%2F23-4047.webp?alt=media&token=7d027341-6a94-4aae-9d77-ba052d86ca76",
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/galleryClientes%2FCTZceN1DllR9MKT75VZs%2FfotosCliente%2F93.webp?alt=media&token=03f130f8-ab52-4807-a399-1bf909c11a24",
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/galleryClientes%2FCTZceN1DllR9MKT75VZs%2FfotosCliente%2FAir%20Conditioning%20Maintenance-8591.webp?alt=media&token=a6540ecd-93ad-481b-9cfb-de4eb62f58ee",
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/galleryClientes%2FCTZceN1DllR9MKT75VZs%2FfotosCliente%2FAir%20Conditioning%20Maintenance2-233.webp?alt=media&token=ffc035ec-8d1d-4535-9256-ab6998f90b86",
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/galleryClientes%2FCTZceN1DllR9MKT75VZs%2FfotosCliente%2FAir%20Conditioning%20Repair-8451.webp?alt=media&token=eb362a7b-75f4-4132-b3cc-d7f0e016ee49",
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/galleryClientes%2FCTZceN1DllR9MKT75VZs%2FfotosCliente%2FAir%20Conditioning%20Repair2-7919.webp?alt=media&token=10126361-a32d-4ad3-ad47-c2661f954af9",
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/galleryClientes%2FCTZceN1DllR9MKT75VZs%2FfotosCliente%2FAir%20Filters-4983.webp?alt=media&token=ef975ad7-13ce-4a6b-b96e-19bf3690ce01",
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/galleryClientes%2FCTZceN1DllR9MKT75VZs%2FfotosCliente%2Fartifical-grass-8778.webp?alt=media&token=37a4febd-4bba-4056-97d4-50d90e5fa0e6",
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/galleryClientes%2FCTZceN1DllR9MKT75VZs%2FfotosCliente%2FArtificial%20Turf-1265.webp?alt=media&token=b18fff96-0aad-4974-ac8c-68bbb3491082",
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/galleryClientes%2FCTZceN1DllR9MKT75VZs%2FfotosCliente%2FArtificial%20Turf2-2278.webp?alt=media&token=d97702ed-ba42-428a-96f8-d183d2b26728"
+      ]
+    },
+    {
+      "_id": "696526abdbd02a25caafa130",
+      "nameLanding": "Services 2",
+      "imgLanding": [
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/galleryClientes%2FCTZceN1DllR9MKT75VZs%2FfotosCliente%2Fimage%20(1)-3365.webp?alt=media&token=dba0e548-f66e-4cb2-810d-6416b60b6546",
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/galleryClientes%2FCTZceN1DllR9MKT75VZs%2FfotosCliente%2Fimage%20(1)-3118.webp?alt=media&token=6ab84011-d6ba-4554-a160-3cc6cf313b10",
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/galleryClientes%2FCTZceN1DllR9MKT75VZs%2FfotosCliente%2Fimage%20(3)-4193.webp?alt=media&token=84795e74-5256-403d-bfe9-f19173ab1cb5",
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/galleryClientes%2FCTZceN1DllR9MKT75VZs%2FfotosCliente%2Fimage-5205.webp?alt=media&token=e40ce730-ffd6-47b3-8860-c5e153ca9493",
+        "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/galleryClientes%2FCTZceN1DllR9MKT75VZs%2FfotosCliente%2Fimage%20(2)-819.webp?alt=media&token=bb83b832-f647-4e3b-a4df-7aade28943b0"
+      ]
+    }
+  ],
+  "redesSociales": [
+    {
+      "_id": "69335df565c693a89dd954ce",
+      "name": "Facebook",
+      "icon": "facebook-f",
+      "logo": "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/socialMedia%2FFACEBOOK.png-tPqhWGvdCI.png?alt=media&token=c52ea5ee-0d5e-490b-b5e5-6ba237c990e3",
+      "link": "facebook.com"
+    },
+    {
+      "_id": "69335df565c693a89dd954cf",
+      "name": "tiktok",
+      "icon": "tiktok",
+      "logo": "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/socialMedia%2Ftiktok.png-vK51JTOaE7.png?alt=media&token=a33ae1cb-8d8f-46f9-964e-ccdad5e18820",
+      "link": "https://www.tiktok.com"
+    },
+    {
+      "_id": "69335df565c693a89dd954d0",
+      "name": "Pinterest",
+      "icon": "pinterest",
+      "logo": "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/socialMedia%2FsocialMedia%2Fimage-1740697029380-0-8229.webp?alt=media&token=d93d5ced-10e0-4639-8114-417f3ec23bb9",
+      "link": "https://www.pinteres.com"
+    }
+  ],
+  "directorios": [
+    {
+      "_id": "69fbb06f8cbb9442a5647ddc",
+      "name": "Yelp",
+      "icon": "yelp",
+      "logo": "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/socialMedia%2Fyelp.png-3Vizqv9LfF.png?alt=media&token=538d810a-61d9-43fc-b14f-38d20b3e1a72",
+      "link": "https://www.yelp.com"
+    },
+    {
+      "_id": "69fbb06f8cbb9442a5647ddd",
+      "name": "MastodonWord",
+      "icon": "MastodonWord",
+      "logo": "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/socialMedia%2FMastodon%20(1).png-hkr77yHqyh.png?alt=media&token=a55efe92-7fe2-4dda-a8e8-b84fafc11323",
+      "link": "https://www.mastodonword.com"
+    }
+  ],
+  "slogan": [
+    "Transforming Spaces, Elevating Lifestyles with Expert Remodeling Solutions.",
+    "Transforming Spaces, Enriching Lives with Expert Craftsmanship.",
+    "Transform Your Space with Our Expert Remodeling Services!",
+    "Transform Your Home with Expert Remodeling and Quality Service!",
+    "Join the Social Media Conversation!",
+    "Elevate Your Home with Expert Remodeling and Installation Services.",
+    "Transform Your Home with Exceptional Craftsmanship and Modern Design.",
+    "Elevate Your Home with Exceptional Remodeling Services.",
+    "Transform Your Space with Expert Remodeling and Design Solutions.",
+    "Revitalize Your Home with Trusted Remodeling Solutions."
+  ],
+  "videoAnimado": [
+    {
+      "_id": "69a7581b902e81c3104d610d",
+      "stateVideo": true,
+      "typeCanal": "YouTube",
+      "urlVideo": "https://www.youtube.com/watch?v=B5blMwCu6jM",
+      "titleVideo": "promo"
+    },
+    {
+      "_id": "69a7582a902e81c3104d6cab",
+      "stateVideo": true,
+      "typeCanal": "YouTube",
+      "urlVideo": "https://www.youtube.com/watch?v=2TG-cMeI4NQ",
+      "titleVideo": "promo"
+    }
+  ],
+  "beforeAfter": [],
+  "creadoPor": "Josue Rivera",
+  "createdAt": "2025-03-05T19:36:32.663Z",
+  "updatedAt": "2026-05-18T21:23:17.175Z",
+  "landingLocations": [],
+  "actualizadoPor": "Josue Rivera",
+  "activo": true,
+  "aiOptimizedPages": []
+}

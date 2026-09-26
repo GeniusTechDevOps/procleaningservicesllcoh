@@ -1,0 +1,93 @@
+---
+import type { RootObject } from "../../../interfaces/dbData";
+import Menu from "../menu/Menu";
+import { getAppDataDirect } from "../../../utils/api";
+import MenuMobile from "../menu/MenuMobile";
+
+// Realiza la llamada a la API (o carga datos locales si API_URL está vacía)
+const data: RootObject = await getAppDataDirect();
+---
+
+<header
+    class="fixed top-0 left-0 w-full z-[100] transition-all duration-500 py-1 md:py-3"
+    id="main-header"
+    transition:animate="none"
+>
+    <div class="container mx-auto px-4 md:px-8">
+        <div
+            class="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl md:rounded-full px-6 py-3 flex justify-between items-center shadow-2xl"
+        >
+            {/* Logo Section */}
+            <div class="hidden lg:flex items-center gap-2 px-2 py-2 rounded-full bg-primary/20 border border-primary/30 backdrop-blur-md">
+              <span class="flex h-2 w-2 rounded-full bg-primary animate-pulse" />
+              <p class="text-white font-bold tracking-wider text-xs uppercase">
+               {data.name}
+              </p>
+            </div>
+
+            {/* Desktop Navigation */}
+            <nav class="hidden lg:flex items-center space-x-2">
+                <Menu data={data} colorText="text-white hover:text-primary" />
+            </nav>
+
+            {/* CTA / Action Buttons */}
+            <div class="flex items-center gap-4 text-sm">
+                <a
+                    href={`tel:${data.dataGeneral.phones[0].number}`}
+                    class="flex items-center gap-2 text-white font-bold bg-primary/20 hover:bg-primary/40 border border-primary/30 px-4 py-2 rounded-full transition-all"
+                >
+                    <i class="fa-solid fa-phone text-primary"></i>
+                    <span>{data.dataGeneral.phones[0].number}</span>
+                </a>
+            </div>
+
+            {/* Mobile Toggle */}
+            <div class="lg:hidden flex items-center">
+                <MenuMobile data={data} client:load />
+            </div>
+        </div>
+    </div>
+</header>
+
+<script is:inline>
+    const header = document.getElementById("main-header");
+    const innerHeader = header.querySelector(".container > div");
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+            header.classList.add("py-2", "md:py-3");
+            innerHeader.classList.add(
+                "bg-slate-950/90",
+                "border-slate-800",
+                "shadow-2xl",
+            );
+            innerHeader.classList.remove(
+                "bg-white/5",
+                "border-white/10",
+                "backdrop-blur-xl",
+            );
+        } else {
+            header.classList.remove("py-2", "md:py-3");
+            innerHeader.classList.remove(
+                "bg-slate-950/90",
+                "border-slate-800",
+                "shadow-2xl",
+            );
+            innerHeader.classList.add(
+                "bg-white/5",
+                "border-white/10",
+                "backdrop-blur-xl",
+            );
+        }
+    });
+</script>
+
+<style>
+    #main-header {
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Estilo personalizado para el menú dentro del header glassmorphism */
+    :global(.content_subItems span) {
+        transition: color 0.3s ease;
+    }
+</style>

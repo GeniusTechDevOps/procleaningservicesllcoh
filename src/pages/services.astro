@@ -1,0 +1,123 @@
+---
+import Animated from "../components/animaciones/Animation";
+import ButtonContent from "../components/buttons/Buttons";
+import Map from "../components/contact/Map";
+import TransparentHeader from "../components/global/TransparentHeader.astro";
+import MapHome from "../components/home/MapHome";
+import type { RootObject, SectionsHomeAbout } from "../interfaces/dbData";
+import Layout from "../layouts/Layout.astro";
+import { getAppDataDirect } from "../utils/api";
+
+// Realiza la llamada a la API (o carga datos locales si API_URL está vacía)
+const data: RootObject = await getAppDataDirect();
+
+//filtrar para obtener la section de home
+const dataBlocks = data?.sectionsHomeAbout.filter(
+  (section: SectionsHomeAbout) => section.section === "blocks",
+);
+---
+
+<Layout
+  title={`Services | ${data.name}`}
+  description={dataBlocks[2].text}
+  favicon={data.logos.primary}
+  featuredImage={data.logos.favicon}
+  keywords={data.services.map((service) => service.title).join(", ")}
+>
+  <TransparentHeader
+    title="Services"
+    image={dataBlocks[2].additionalImages[0]}
+  />
+  <section class="relative w-full py-24 lg:py-32 bg-slate-50">
+    <div class="container mx-auto px-6 lg:px-12">
+      {/* Section Header */}
+      <Animated variant="fade-up" duration="duration-1000" client:load>
+        <div class="text-center max-w-4xl mx-auto mb-24">
+          <div class="inline-flex items-center gap-3 mb-6">
+            <span class="w-12 h-[2px] bg-primary"></span>
+            <span
+              class="text-primary font-black text-xs uppercase tracking-widest"
+              >Our Expertise</span
+            >
+            <span class="w-12 h-[2px] bg-primary"></span>
+          </div>
+          <h2
+            class="text-4xl md:text-6xl font-black text-slate-900 leading-none tracking-tighter mb-8 uppercase italic"
+          >
+            Professional <span class="text-secondary">Cleaning Services</span>
+          </h2>
+          <p
+            class="text-slate-600 text-lg font-medium max-w-2xl mx-auto italic"
+          >
+            "{data.slogan[3]}"
+          </p>
+        </div>
+      </Animated>
+
+      {/* Services Grid - Architectural Design */}
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12"
+      >
+        {
+          data.services.map((item, index) => (
+            <Animated
+              variant="fade-up"
+              duration="duration-700"
+              delay={`delay-${(index % 3) * 200}`}
+              client:load
+            >
+              <div class="group bg-white rounded-[3rem] overflow-hidden border border-slate-100 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-slate-300 transition-all duration-500 flex flex-col h-full">
+                {/* Image Container */}
+                <div class="relative h-72 overflow-hidden">
+                  <img
+                    src={item.description[0].image}
+                    alt={item.title}
+                    class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+
+                  {/* Floating Category Badge */}
+                  <div class="absolute top-6 right-6">
+                    <div class="px-4 py-2 bg-white/90 backdrop-blur-md rounded-full shadow-lg">
+                      <span class="text-[10px] font-black uppercase tracking-widest text-primary">
+                        Best Quality
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Content Container */}
+                <div class="p-10 flex flex-col flex-grow">
+                  <div class="flex items-center gap-3 mb-4">
+                    <span class="w-8 h-[2px] bg-secondary group-hover:w-12 transition-all" />
+                    <h3 class="text-2xl font-black text-slate-900 leading-tight">
+                      {item.title}
+                    </h3>
+                  </div>
+
+                  <p class="text-slate-500 text-sm leading-relaxed mb-10 flex-grow">
+                    {item.description[0].text}
+                  </p>
+
+                  <div class="pt-6 border-t border-slate-50">
+                    <a
+                      href={`tel:+1${data.dataGeneral.phones[0].number}`}
+                      class="group/btn relative inline-flex items-center gap-4 text-slate-900 font-black text-xs uppercase tracking-widest hover:text-primary transition-colors"
+                    >
+                      <span>Request Service</span>
+                      <div class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center group-hover/btn:bg-primary group-hover/btn:text-white transition-all">
+                        <i class="fa-solid fa-arrow-right" />
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </Animated>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <MapHome data={data} client:visible />
+</Layout>

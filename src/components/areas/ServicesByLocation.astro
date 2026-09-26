@@ -1,0 +1,291 @@
+---
+import FormatText from "../../hooks/FormatText";
+
+export interface Props {
+  data: any;
+}
+
+const { data } = Astro.props as Props;
+
+const areasWeServeOn = Boolean(
+  (data as any)?.widgets?.areasWeServe ?? (data as any)?.widgets?.areasweserve,
+);
+
+const services = data?.services ?? [];
+const allLocations = data?.dataGeneral?.location ?? [];
+const locationIndexes = [1, 2, 22, 19, 21, 11];
+const locations = locationIndexes
+  .map((index) => allLocations[index])
+  .filter((loc) => Boolean(loc?.city));
+
+const grouped: Record<
+  string,
+  {
+    cityName: string;
+    citySlug: string;
+    items: { href: string; serviceTitle: string }[];
+  }
+> = {};
+
+let totalLinks = 0;
+for (const loc of locations) {
+  const city = loc.city;
+  const citySlug = FormatText(city);
+  grouped[city] = { cityName: city, citySlug, items: [] };
+  for (const service of services) {
+    if (totalLinks >= 200) break;
+    const serviceSlug = FormatText(service.title);
+    grouped[city].items.push({
+      href: `/services/${serviceSlug}-in-${citySlug}`,
+      serviceTitle: service.title,
+    });
+    totalLinks++;
+  }
+}
+
+const cities = Object.entries(grouped);
+const hasContent = cities.length > 0;
+---
+
+{
+  areasWeServeOn ? (
+    <section class="w-full py-16 md:py-24 bg-white text-black overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4">
+        {/* 1. Header Minimalista */}
+        <header class="mb-16 md:mb-20 max-w-2xl">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="w-8 h-px bg-primary" />
+            <span class="text-primary uppercase tracking-widest text-xs font-bold">
+              Coverage
+            </span>
+          </div>
+          <h2 class="text-4xl md:text-6xl font-extrabold tracking-tighter leading-none mb-4">
+            Local Experts,
+            <br /> Everywhere.
+          </h2>
+          <p class="text-gray-400 text-lg md:text-xl font-light leading-relaxed">
+            Select a city to explore specialized services available in your
+            immediate area. We represent{" "}
+            <strong class="text-black font-semibold">
+              {cities.length} distinct regions
+            </strong>
+            .
+          </p>
+        </header>
+
+        {!hasContent ? (
+          <div class="rounded-2xl border-2 border-dashed border-gray-800 p-12 text-center bg-white">
+            <p class="text-gray-500 text-lg">
+              Configuration required: No services or locations defined.
+            </p>
+          </div>
+        ) : (
+          /* 2. Main Content Wrapper (Sideways Layout) */
+          <div class="flex flex-col md:flex-row gap-8 lg:gap-12 items-start">
+            {/* 3. City Navigation (Sidebar) */}
+            <nav
+              class="w-full md:w-1/4 md:sticky md:top-10 flex-shrink-0"
+              aria-label="City selection"
+            >
+              {/* Mobile scroll indicator */}
+              <div class="md:hidden text-xs text-gray-600 mb-2 flex items-center gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+                Scroll to select city
+              </div>
+
+              <div
+                class="flex md:flex-col gap-2 overflow-x-auto pb-4 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0 no-scrollbar"
+                id="city-nav-list"
+              >
+                {cities.map(([city, group], idx) => (
+                  <button
+                    type="button"
+                    class={`city-nav-btn group flex items-center justify-between w-full min-w-[160px] md:min-w-0 text-left px-5 py-4 rounded-xl transition-all duration-300 ${
+                      idx === 0
+                        ? "bg-primary text-white shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05)]"
+                        : "text-gray-400 hover:text-primary hover:bg-white/[0.02]"
+                    }`}
+                    data-city-index={idx}
+                  >
+                    <span class="font-semibold text-base tracking-tight truncate">
+                      {group.cityName}
+                    </span>
+                    <span
+                      class={`flex items-center justify-center ml-3 text-xs font-bold w-7 h-7 rounded-full transition-colors ${idx === 0 ? "bg-white text-[#0a0a0c]" : "bg-gray-800 text-gray-400 group-hover:bg-gray-700 group-hover:text-white"}`}
+                    >
+                      {group.items.length}
+                    </span>
+                  </button>
+                ))}
+              </div>
+            </nav>
+
+            {/* 4. Service Grid (Main Panel) */}
+            <main
+              class="w-full md:w-3/4 "
+              id="services-panel-container"
+            >
+              {cities.map(([city, group], idx) => (
+                <div
+                  data-city-panel
+                  class={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 transition-all duration-700 ease-in-out ${idx === 0 ? "opacity-100" : "hidden opacity-0 translate-y-4"}`}
+                >
+                  {group.items.map((it) => (
+                    <a
+                      href={it.href}
+                      class="group relative bg-gradient-to-br from-white/[0.05] to-transparent border border-white/5 p-6 shadow-lg rounded-2xl flex flex-col justify-between h-full hover:border-primary/50 hover:bg-white/[0.08] transition-all duration-500 overflow-hidden"
+                      aria-label={`Service: ${it.serviceTitle} in ${group.cityName}`}
+                    >
+                      {/* Decoración de fondo (Brillo sutil) */}
+                      <div class="absolute -right-8 -top-8 w-24 h-24 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/20 transition-colors duration-500" />
+
+                      <div class="relative z-10">
+                        <div class="mb-4 inline-flex items-center justify-center w-10 h-10 rounded-lg bg-slate-300 text-primary group-hover:scale-110 transition-transform duration-500">
+                          <img src={data.logos.favicon} alt="" >
+                        </div>
+
+                        <h3 class="text-primary text-xl font-bold leading-tight tracking-tight mb-4 group-hover:text-primary transition-colors">
+                          {it.serviceTitle}
+                        </h3>
+                      </div>
+
+                      <div class="relative z-10 flex items-center justify-between gap-2 pt-4 border-t border-white/10">
+                        <span class="text-xs font-medium text-gray-400 uppercase tracking-wider group-hover:text-gray-300">
+                          {group.cityName}
+                        </span>
+
+                        <div class="flex items-center text-primary font-semibold text-sm opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-300">
+                          View
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-4 w-4 ml-1"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M9 5l7 7-7 7"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+
+                      {/* Línea de acento inferior animada */}
+                      <div class="absolute bottom-0 left-0 h-[2px] w-0 bg-primary group-hover:w-full transition-all duration-700" />
+                    </a>
+                  ))}
+                </div>
+              ))}
+            </main>
+          </div>
+        )}
+      </div>
+    </section>
+  ) : null
+}
+
+<style>
+  /* Hide scrollbar for chrome/safari/edge */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  /* Definir color primario por defecto si no existe en la config */
+  :root {
+    --color-primary: var(--color-primary); /* Blue 500 por defecto */
+  }
+
+  /* Si usas Tailwind, esto mapea la clase bg-primary automáticamente */
+  .bg-primary {
+    background-color: #FF8000;
+  }
+  .text-primary {
+    color: var(--color-primary);
+  }
+  .border-primary {
+    border-color: var(--color-primary);
+  }
+</style>
+
+<script>
+  function initBentoLocations() {
+    const navList = document.getElementById("city-nav-list");
+    if (!navList) return;
+
+    const buttons = navList.querySelectorAll(".city-nav-btn");
+    const panels = document.querySelectorAll("[data-city-panel]");
+
+    buttons.forEach((btn, idx) => {
+      btn.addEventListener("click", () => {
+        // 1. Resetear estados de todos los botones
+        buttons.forEach((b) => {
+          b.classList.remove(
+            "bg-primary",
+            "text-white",
+            "shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05)]",
+          );
+          b.classList.add("text-gray-400");
+
+          // Uso de Optional Chaining (?.) para evitar el error de "null"
+          const badge = b.querySelector("span:last-child");
+          if (badge) {
+            badge.classList.remove("bg-primary", "text-[#0a0a0c]");
+            badge.classList.add("bg-gray-800", "text-gray-400");
+          }
+        });
+
+        // 2. Activar el botón clickeado
+        btn.classList.add(
+          "bg-primary",
+          "text-white",
+          "shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05)]",
+        );
+        btn.classList.remove("text-gray-400");
+
+        const activeBadge = btn.querySelector("span:last-child");
+        if (activeBadge) {
+          activeBadge.classList.add("bg-white", "text-[#0a0a0c]");
+          activeBadge.classList.remove("bg-gray-800", "text-gray-400");
+        }
+
+        // 3. Actualizar Paneles con animación
+        panels.forEach((panel, pIdx) => {
+          if (idx === pIdx) {
+            panel.classList.remove("hidden");
+            setTimeout(() => {
+              panel.classList.add("opacity-100");
+              panel.classList.remove("opacity-0", "translate-y-2");
+            }, 20);
+          } else {
+            panel.classList.add("hidden", "opacity-0", "translate-y-2");
+            panel.classList.remove("opacity-100");
+          }
+        });
+      });
+    });
+  }
+
+  initBentoLocations();
+  document.addEventListener("astro:page-load", initBentoLocations);
+</script>

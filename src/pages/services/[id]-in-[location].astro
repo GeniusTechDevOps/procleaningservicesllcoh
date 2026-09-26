@@ -1,0 +1,254 @@
+---
+import FormatText from "../../hooks/FormatText";
+import type { Service } from "../../interfaces/dbData";
+import Layout from "../../layouts/Layout.astro";
+import Map from "../../components/areas/Map";
+import { getAppDataDirect } from "../../utils/api";
+
+const { id, location } = Astro.params;
+const data: any = await getAppDataDirect();
+
+// Si areasWeServe está desactivado, devolver 404
+if (!data.widgets?.areasweserve) {
+  return new Response(null, { status: 404 });
+}
+
+// Encontrar el servicio por ID (slug del servicio)
+const service = data.services.find(
+  (service: Service) => FormatText(service.title) === id
+);
+
+// Resolver ciudad a partir del slug de location (usar lista completa para no perder coincidencias)
+const locObj = data.dataGeneral.location?.find((l: any) => FormatText(l.city) === location);
+const cityName = locObj?.city ?? (location || "");
+
+// Limitar a las primeras 5 locations para el resto del render en esta página
+const top3Locations = (data.dataGeneral.location ?? []).slice(1, 5);
+data.dataGeneral.location = top3Locations as any;
+
+// Imagen de fondo del hero (usar si existe, si no, color de fondo)
+const bgImage = service?.description?.[0]?.image || data.gallery?.[0] || "";
+// Meta description: primera oración (hasta el primer punto)
+const rawDesc = service?.description?.[0]?.text ?? "";
+const dotIdx = rawDesc.indexOf(".");
+const firstSentence = (dotIdx !== -1 ? rawDesc.slice(0, dotIdx + 1) : rawDesc).trim();
+const metaDescription = firstSentence || `${service?.title ?? "Service"}${cityName ? ` in ${cityName}` : ""}.`;
+---
+
+<Layout
+  title={`${service?.title} in ${cityName} | ${data.name}`}
+  description={metaDescription}
+  favicon={data.logos.primary}
+  featuredImage={service?.description[0].image!}
+  keywords={`${service?.title} in ${cityName}, ${data.services.map((s: any) => s.title).join(", ")}`}
+>
+  {/* JSON-LD para SEO: Service con areaServed */}
+  {service ? (
+    <script type="application/ld+json">
+      {JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: `${service.title} ${cityName ? `in ${cityName}` : ''}`.trim(),
+        provider: {
+          '@type': 'LocalBusiness',
+          name: data.name,
+          image: data.logos.primary,
+        },
+        areaServed: cityName || undefined,
+        description: service.description?.[0]?.text,
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: 'Services',
+          itemListElement: data.services.map((s) => ({
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: s.title,
+            },
+          })),
+        },
+      })}
+    </script>
+  ) : null}
+  {/* Hero totalmente nuevo */}
+  <div class="px-4 py-2 ">
+    <section
+    class={`relative w-full md:h-[80vh] h-[80vh] overflow-hidden bg-gradient-to-b to-primary from-secondary rounded-2xl`}
+    style={bgImage ? `background-size: cover; background-position: center;` : undefined}
+  >
+
+    <div class="relative z-10 md:w-[85%] w-[94%] mx-auto h-full flex items-end pb-10">
+      <div class="w-full grid grid-cols-1 md:grid-cols-12 gap-6 items-end">
+        {/* Left: main text */}
+        <div class="md:col-span-7 text-white">
+          <nav class="text-white/80 text-sm mb-2">
+            <a href="/" class="hover:text-white">Home</a>
+            <span class="mx-2">/</span>
+            <a href="/services" class="hover:text-white">Services</a>
+            <span class="mx-2">/</span>
+            <span>{service?.title} {cityName ? `in ${cityName}` : ""}</span>
+          </nav>
+
+          <h1 class="text-white font-extrabold leading-tight md:text-5xl text-3xl">
+            {service?.title}
+            {cityName ? <span class="text-white/80">&nbsp;in {cityName}</span> : null}
+          </h1>
+
+          <p class="mt-4 text-white/90 max-w-xl">{firstSentence || service?.description?.[0]?.text}</p>
+
+          <div class="flex flex-wrap gap-3 mt-6">
+            <a href="/contact" class="inline-flex items-center gap-3 bg-secondary text-white px-5 py-3 rounded-md font-semibold shadow-lg">Get a Free Quote <i class="fas fa-arrow-right" /></a>
+            {data.dataGeneral.phones?.[0]?.number ? (
+              <a href={`tel:+1${data.dataGeneral.phones[0].number}`} class="inline-flex items-center gap-3 bg-white/10 text-white px-5 py-3 rounded-md font-semibold border border-white/20"> <i class="fas fa-phone" /> {data.dataGeneral.phones[0].number}</a>
+            ) : null}
+          </div>
+        </div>
+
+        {/* Right: translucent contact card */}
+
+        <div class="md:col-span-5 flex justify-end">
+          <div class="w-full max-w-md bg-white/90 text-gray-900 rounded-lg p-6 shadow-xl backdrop-blur-sm border border-gray-100">
+            <div class="flex items-center gap-4 mb-4">
+              <img src={data.logos.primary} alt={data.name} class="w-14 h-14 object-contain" />
+              <div>
+                <div class="font-bold">{data.name}</div>
+                <div class="text-sm text-gray-600">{cityName || data.location}</div>
+              </div>
+            </div>
+            <div class="space-y-3">
+              {data.dataGeneral.phones?.slice(0,2).map((phone: any) => (
+                <a href={`tel:+1${phone.number}`} class="block w-full text-center bg-primary text-white py-2 rounded-md">Call us Now!: {phone.number}</a>
+              ))}
+              <a href="/contact" class="block w-full text-center border border-gray-200 py-2 rounded-md">Contact Form</a>
+            </div>
+            <div class="mt-4 text-xs text-gray-500">We serve multiple locations. Click a city below to see availability.</div>
+            <div class="mt-3 flex flex-wrap gap-2">
+              {top3Locations.map((l: any) => (
+                <a href={`/services/${FormatText(service?.title || '')}-in-${FormatText(l.city)}`} class="px-3 py-1 bg-gray-100 rounded-full text-sm">{l.city}</a>
+              ))}
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  </div>
+
+  {/* Cuerpo con diseño diferente */}
+  <section class="md:w-[80%] w-[92%] mx-auto py-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+      {/* Contenido principal */}
+      <div class="lg:col-span-8">
+        {service?.description.map((desc: any, idx: number) => (
+          <article class={`grid grid-cols-1 md:grid-cols-2 gap-6 items-center ${idx % 2 === 1 ? 'md:[&>*:first-child]:order-2' : ''} mb-10`}>
+            <div>
+              <img src={desc.image} alt={service?.title} class="w-full h-[260px] md:h-[360px] object-cover rounded-lg shadow" />
+            </div>
+            <div>
+              <h2 class="text-2xl md:text-3xl font-bold mb-3">{service?.title}{cityName ? ` in ${cityName}` : ''}</h2>
+              <p class="text-gray-700 leading-relaxed">{desc.text}</p>
+            </div>
+          </article>
+        ))}
+
+        {/* Bloque informativo por ubicación */}
+        {cityName ? (
+          <div class="rounded-lg border border-gray-200 p-5 bg-gray-50">
+            <p class="text-sm text-gray-700">
+              We proudly offer <strong>{service?.title}</strong> in <strong>{cityName}</strong> and nearby areas.
+            </p>
+          </div>
+        ) : null}
+      </div>
+
+      {/* Tarjeta de contacto sticky */}
+      <aside class="lg:col-span-4">
+        
+        <div class="sticky top-24 rounded-xl border border-gray-200 p-6 bg-white shadow-sm">
+          <div class="flex items-center gap-3 mb-4">
+            <img src={data.logos.primary} alt={data.name} class="w-12 h-12 object-contain" />
+            <div>
+              <p class="text-sm text-gray-500">Ready to start?</p>
+              <h3 class="text-lg font-bold">Request your free quote</h3>
+            </div>
+          </div>
+          <div class="space-y-3">
+            {data.dataGeneral.phones?.slice(0,2).map((phone: any) => (
+              <a href={`tel:+1${phone.number}`} class="flex items-center justify-center gap-2 w-full bg-secondary hover:bg-primary text-white py-3 rounded-md font-semibold transition-colors">
+                <i class="fas fa-phone" /> {phone.number}
+              </a>
+            ))}
+            <a href="/contact" class="flex items-center justify-center gap-2 w-full border border-gray-300 hover:border-primary py-3 rounded-md font-semibold transition-colors">
+              <i class="fas fa-paper-plane" /> Contact Form
+            </a>
+          </div>
+          {cityName ? (
+            <p class="text-xs text-gray-500 mt-4 text-center">Service available in {cityName} and surrounding areas.</p>
+          ) : null}
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  {/* Otros servicios en el área */}
+  {cityName ? (
+    <section class="md:w-[80%] w-[92%] mx-auto py-10">
+      <h3 class="text-xl md:text-2xl font-bold mb-4">Other services in {cityName}</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
+        {data.services
+          .filter((s: any) => FormatText(s.title) !== id)
+          .slice(0, 6)
+          .map((s: any) => (
+            <a
+              href={`/services/${FormatText(s.title)}-in-${FormatText(cityName)}`}
+              class="group p-4 rounded-lg border border-gray-200 hover:border-primary hover:shadow-md transition-all bg-white"
+            >
+              <div class="font-semibold text-gray-900">{s.title}</div>
+              <div class="mt-1 text-xs text-gray-500 flex items-center gap-2">
+                <i class="fas fa-map-marker-alt text-secondary" aria-hidden="true"></i> {cityName}
+              </div>
+              <div class="mt-2 text-sm text-gray-600 line-clamp-2">{s.description?.[0]?.text}</div>
+              <span class="inline-flex items-center gap-2 mt-3 text-primary text-sm">
+                View details <i class="fas fa-arrow-right" aria-hidden="true"></i>
+              </span>
+            </a>
+          ))}
+      </div>
+    </section>
+  ) : null}
+
+  {/* Otros servicios en otras locations */}
+  {service && cityName ? (
+    <section class="md:w-[80%] w-[92%] mx-auto py-10">
+      <h3 class="text-xl md:text-2xl font-bold mb-4">Other services in other locations</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
+        {data.services
+          .filter((s: any) => FormatText(s.title) !== id)
+          .flatMap((s: any) =>
+            (data.dataGeneral.location ?? []).slice(1, 6)
+              .filter((l: any) => FormatText(l.city) !== FormatText(cityName))
+              .map((l: any) => ({ service: s, location: l }))
+          )
+          .slice(0, 6)
+          .map(({ service: s, location: l }:any) => (
+            <a
+              href={`/services/${FormatText(s.title)}-in-${FormatText(l.city)}`}
+              class="group p-4 rounded-lg border border-gray-200 hover:border-primary hover:shadow-md transition-all bg-white"
+            >
+              <div class="font-semibold text-gray-900">
+                <i class="fas fa-location-dot text-primary mr-1" aria-hidden="true"></i>
+                {s.title} in <span class="text-primary">{l.city}</span>
+              </div>
+              <span class="inline-flex items-center gap-2 mt-3 text-primary text-sm">
+                View details <i class="fas fa-arrow-right" aria-hidden="true"></i>
+              </span>
+            </a>
+          ))}
+      </div>
+    </section>
+  ) : null}
+
+  {/* Mapa con solo la ciudad seleccionada */}
+  <Map data={data} selectedUrlCity={locObj?.urlCity} showCityList={false} singleCityName={cityName} />
+</Layout>

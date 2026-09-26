@@ -1,0 +1,75 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ContactComponent from "../components/contact/contact.astro";
+import ContactForm from "../components/contact/Form.tsx";
+import MapComponent from "../components/contact/Map.tsx";
+
+import EstimatePro from "../components/contact/EstimatePro.tsx";
+import type { RootObject, SectionsHomeAbout } from "../interfaces/dbData.ts";
+import TransparentHeader from "../components/global/TransparentHeader.astro";
+import { getAppDataDirect } from "../utils/api";
+
+// Realiza la llamada a la API (o carga datos locales si API_URL está vacía)
+const data: RootObject = await getAppDataDirect();
+
+//filtrar para obtener la section de home
+const dataBlocks = data?.sectionsHomeAbout.filter(
+    (section: SectionsHomeAbout) => section.section === "blocks",
+);
+---
+
+<Layout
+    title={`Contact | ${data.name}`}
+    description={dataBlocks[4]?.text || "Contact us"}
+    favicon={data.logos.primary}
+    featuredImage={data.logos.favicon}
+    keywords={data.services.map((service) => service.title).join(", ")}
+>
+    <TransparentHeader title="Contact Us" image={data.gallery[5]} />
+    <section class="relative w-full overflow-hidden bg-white">
+        <div class="container mx-auto px-6 lg:px-12 py-20">
+            {/* Full Width Info Cards */}
+            <div class="mb-24">
+                <div class="text-center mb-6">
+                    <div class="inline-flex items-center gap-3 mb-6">
+                        <span class="w-12 h-[2px] bg-primary"></span>
+                        <span
+                            class="text-primary font-black text-xs uppercase tracking-widest"
+                            >Connect With Us</span
+                        >
+                        <span class="w-12 h-[2px] bg-primary"></span>
+                    </div>
+                    <h2
+                        class="text-4xl md:text-5xl font-black text-slate-900 leading-tight"
+                    >
+                        Our Contact <span class="text-secondary italic"
+                            >Details</span
+                        >
+                    </h2>
+                </div>
+                <ContactComponent data={data} />
+            </div>
+
+            {/* Contact Form Section - Structured for clarity */}
+            <div class="max-w-4xl mx-auto">
+                <div
+                    class="bg-slate-50 rounded-[4rem] p-8 md:p-16 lg:p-20 border border-slate-100 shadow-2xl shadow-slate-200"
+                >
+                    <div class="text-center mb-12">
+                        <h2
+                            class="text-3xl md:text-5xl font-black text-slate-900 mb-4 tracking-tighter"
+                        >
+                            Get In <span class="text-primary">Touch!</span>
+                        </h2>
+                        <p class="text-slate-500 text-sm font-medium">
+                            Fill out the form below and our team will get back
+                            to you shortly.
+                        </p>
+                    </div>
+                    <ContactForm data={data} client:load />
+                </div>
+            </div>
+        </div>
+    </section>
+    <MapComponent data={data} client:visible />
+</Layout>

@@ -1,0 +1,64 @@
+---
+import HeroSection2 from "../components/home/HeroSection2";
+import type { RootObject, SectionsHomeAbout } from "../interfaces/dbData";
+import Layout from "../layouts/Layout.astro";
+import HomeSection from "../components/home/HomeSectionOne";
+import HomeSectionTwo from "../components/home/HomeSectionTwo";
+import ServHome from "../components/home/ServiHome";
+import Emblema from "../components/home/Emblema";
+import Directories from "../components/home/Directories";
+import VideoShowcaseSection from "../components/video/VideoShowcaseSection";
+import ColorPalette from "../components/home/ColorPalette";
+import MapHome from "../components/home/MapHome";
+import { getAppDataDirect } from "../utils/api";
+import ServicesByLocation from "../components/areas/ServicesByLocation.astro";
+import TrustBarComponents from "../components/trustBar/TrustBarComponents";
+
+// Realiza la llamada a la API (o carga datos locales si API_URL está vacía)
+const data: RootObject = await getAppDataDirect();
+//filtrar para obtener la section de home
+const homeSection = data?.sectionsHomeAbout.filter(
+	(section: SectionsHomeAbout) => section.section === "home",
+);
+//filtrar para obtener la section de home
+const dataBlocks = data?.sectionsHomeAbout.filter(
+	(section: SectionsHomeAbout) => section.section === "blocks",
+);
+//filtrar para obtener la section de about
+const aboutSection = data?.sectionsHomeAbout.filter(
+	(section: SectionsHomeAbout) => section.section === "about",
+);
+---
+
+<Layout
+	title={`Home | ${data.name}`}
+	description={dataBlocks[0].text}
+	favicon={data.logos.primary}
+	featuredImage={data.logos.favicon}
+	keywords={data.services.map((service) => service.title).join(", ")}
+>
+	<HeroSection2 data={data} client:load />
+	<HomeSectionTwo data={data} homeSection={homeSection} client:load />
+	<HomeSection data={data} homeSection={homeSection} client:load />
+	<TrustBarComponents dataGlobal={data} client:load />
+	<ServicesByLocation data={data} />
+	<ServHome
+		dataGeneral={data.dataGeneral}
+		dbServices={data.services}
+		landingServices={data.widgets.landingServices}
+		dataglobal={data}
+		client:load
+	/>
+	<Emblema
+		dataBlocks={dataBlocks}
+		widgetActive={true}
+		data={data}
+		client:load
+	/>
+	<Directories client:only data={data} />
+	<VideoShowcaseSection data={data} client:load />
+	<!-- {data.widgets.colorPalette ? <ColorPalette /> : null} -->
+	
+	
+	<MapHome data={data} client:visible />
+</Layout>

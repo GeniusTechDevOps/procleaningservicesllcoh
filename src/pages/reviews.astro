@@ -1,0 +1,107 @@
+---
+import TransparentHeader from "../components/global/TransparentHeader.astro";
+import type { RootObject, SectionsHomeAbout } from "../interfaces/dbData";
+import Layout from "../layouts/Layout.astro";
+
+const API_URL = import.meta.env.API_URL;
+
+// Fetch site data and reviews concurrently for better performance
+const [siteResponse, reviewsResponse] = await Promise.all([
+  fetch(API_URL),
+  fetch('https://widget-wizzard.netlify.app/api/reviews/aoAksKme67HSv4YcqNZs')
+]);
+
+const data: RootObject = await siteResponse.json();
+const reviewsData = await reviewsResponse.json();
+
+const dataBlocks = data?.sectionsHomeAbout.filter(
+  (section: SectionsHomeAbout) => section.section === "blocks",
+);
+---
+
+<Layout
+  title={`Home | ${data.name}`}
+    description={dataBlocks[1].text}
+    favicon={data.logos.primary}
+    featuredImage={data.logos.favicon}
+    keywords={data.services.map((service) => service.title).join(", ")}
+>
+  <TransparentHeader
+    image={dataBlocks[5]?.additionalImages[0] || data.gallery[7]}
+    title="Customer Reviews"
+  />
+
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-4xl font-extrabold text-gray-900 mb-12 text-center">
+      What Our Customers Say
+    </h2>
+
+    <div class="reviews-grid">
+      {reviewsData.reviews.map((review: any) => (
+        <article class="review-card" aria-label={`Review by ${review.user}`}>
+          <div class="review-header">
+            <h3 class="user-name">{review.user}</h3>
+            <span class="rating" aria-label={`${review.rate} out of 5 stars`}>
+              ★ {review.rate}
+            </span>
+          </div>
+          <p class="commentary">"{review.commentary}"</p>
+          <footer class="origin">
+            Verified purchase via {review.origin}
+          </footer>
+        </article>
+      ))}
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+
+  .review-card {
+    background: #ffffff;
+    border: 1px solid #f0f0f0;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .review-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  }
+
+  .review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+  }
+
+  .user-name { font-weight: 700; color: #1a1a1a; margin: 0; }
+  
+  .rating { 
+    background: #fff9e6; 
+    color: #d97706; 
+    padding: 0.25rem 0.75rem; 
+    border-radius: 20px; 
+    font-weight: 700; 
+    font-size: 0.875rem;
+  }
+
+  .commentary { color: #4b5563; line-height: 1.75; font-style: italic; }
+  
+  .origin { 
+    display: block; 
+    margin-top: 1.5rem; 
+    color: #9ca3af; 
+    font-size: 0.75rem; 
+    text-transform: uppercase; 
+    letter-spacing: 0.05em;
+  }
+</style>
