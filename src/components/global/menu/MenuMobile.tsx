@@ -24,7 +24,7 @@ const MenuMobile: React.FunctionComponent<MenuMobileProps> = ({
         { name: "Services", path: "/services", visible: true },
         { name: "Portfolio", path: "/portfolio", visible: true },
         { name: "Reviews", path: "/reviews", visible: Boolean(reviewsEnabled) },
-        { name: "Resources", path: "/resources", visible: false },
+        { name: "Resources", path: "/resources", visible: true },
         { name: "Local Profile", path: "/local-profile", visible: false },
         { name: "Blog", path: "/blog", visible: true },
         { name: "Contact", path: "/contact", visible: Boolean(blogEnabled) },

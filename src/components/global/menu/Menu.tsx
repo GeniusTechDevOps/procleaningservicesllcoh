@@ -85,11 +85,11 @@ export default function Menu({
       icon: "Videos",
       statusRoutes: data?.widgets?.landingVideos && data.videos?.landingVideos,
     },
-    // {
-    //   name: "Resources",
-    //   path: "/resources",
-    //   icon: "Resources",
-    // },
+    {
+      name: "Resources",
+      path: "/resources",
+      icon: "Resources",
+    },
     // {
     //   name: "Local Profile",
     //   path: "/local-profile",
