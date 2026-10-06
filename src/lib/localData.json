@@ -55,9 +55,9 @@
     ]
   },
   "valuesContent": {
-    "mission": "Empowering individuals and businesses through innovative tree care solutions, we prioritize health, safety, and exceptional service. Our commitment to enhancing the vitality of your outdoor spaces ensures that you can enjoy a thriving environment while maintaining peace of mind.",
-    "vision": "Innovating tree care through strategic excellence, we envision a future where sustainable solutions enhance the health of our communities and the environment. Our commitment to advanced techniques and customer satisfaction drives us to set new standards in tree management.",
-    "whychooseUs": "Choose our tree services for comprehensive solutions that ensure the health and safety of your trees. Our extensive expertise in tree health, emergency services, stump grinding, and trimming guarantees prompt and professional care tailored to your needs. We leverage advanced techniques and equipment to deliver exceptional results.",
+    "mission": "Empowering homes and businesses through reliable cleaning solutions, we prioritize health, safety, and exceptional service. Our commitment to a spotless indoor environment ensures you can enjoy your space with complete peace of mind.",
+    "vision": "Innovating professional cleaning through strategic excellence, we envision a future where sustainable practices enhance the health of our communities and the environment. Our commitment to advanced techniques and customer satisfaction drives us to set new standards in cleaning services.",
+    "whychooseUs": "Choose our cleaning services for comprehensive solutions that keep your property immaculate and healthy. Our extensive expertise in deep cleaning, emergency cleanups, post-construction cleaning, and recurring maintenance guarantees prompt and professional care tailored to your needs. We leverage advanced techniques and equipment to deliver exceptional results.",
     "additionalImages": [
       "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/Stock%2FTree%20Services%2FTree%20Pruning-4043.webp?alt=media&token=7b265607-6a01-4b53-9380-d0d555e4d7ed",
       "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/Stock%2FTree%20Services%2FTree%20Pruning%20(1).jpg?alt=media&token=6cf8c28f-020a-4723-bdda-39b9df208aa8",
@@ -110,8 +110,8 @@
     "btnHoverColor": "#176334"
   },
   "_id": "CTZceN1DllR9MKT75VZs",
-  "nameCustomers": "Genius Tree Services LLC",
-  "name": "Genius Tree Services LLC",
+  "nameCustomers": "Pro Cleaning Services LLC",
+  "name": "Pro Cleaning Services LLC",
   "businessAddress": "San Francisco, CA 94103-4650",
   "accountAddress": "San Francisco, CA 94103-4650",
   "domain": "gtd-portfolio.netlify.app",
@@ -128,7 +128,7 @@
       "_id": "67c8a7da1b23dcb387ebebee",
       "section": "home",
       "title": "Transform Your Space with Professional Care",
-      "text": "Elevate your outdoor space with professional tree care that promotes health and safety. Our extensive expertise in tree trimming, removal, and emergency services ensures your property remains beautiful and hazard-free. Experience exceptional stump grinding and removal for a clean, polished landscape. Transform your environment today with our dedicated services.",
+      "text": "Elevate your space with professional cleaning that promotes health and safety. Our extensive expertise in deep cleaning, sanitizing, and emergency service calls ensures your property stays spotless and germ-free. Experience exceptional move-in, move-out, and post-construction cleaning for a clean, polished result. Transform your environment today with our dedicated services.",
       "tipos": "Segundo Block Home",
       "list": [],
       "additionalImages": [
@@ -140,8 +140,8 @@
     {
       "_id": "67c8a7da1b23dcb387ebebef",
       "section": "about",
-      "title": "Making Space, Removing Waste, Safely Done.",
-      "text": "Transform your landscape with our expert tree services. Our skilled team excels in tree health, emergency response, stump grinding, trimming, and removal, delivering results that enhance both safety and beauty. Count on us to create a space that reflects your vision while ensuring the utmost care for your property.",
+      "title": "Deep Cleaning, Disinfecting, and Care, Expertly Done.",
+      "text": "Transform your property with our expert cleaning services. Our skilled team excels in deep cleaning, emergency response, floor care, sanitizing, and move-in/move-out service, delivering results that enhance both hygiene and beauty. Count on us to create a space that reflects your vision while ensuring the utmost care for your property.",
       "tipos": "Primer Block About",
       "list": [],
       "additionalImages": [
@@ -153,8 +153,8 @@
     {
       "_id": "67c8a7da1b23dcb387ebebf0",
       "section": "about",
-      "title": "Tree Care You Can Trust.",
-      "text": "Enhance your property with reliable tree care from a dedicated team. Our extensive expertise in tree health, emergency services, stump grinding, trimming, and removal guarantees safe and effective solutions tailored to your needs. Trust us to maintain the beauty and health of your landscape while prioritizing quality and professionalism in every service we provide. Experience the peace of mind that comes with expert tree care you can rely on.",
+      "title": "Cleaning Care You Can Trust.",
+      "text": "Enhance your property with reliable cleaning from a dedicated team. Our extensive expertise in deep cleaning, emergency service, floor care, sanitizing, and move-in/move-out cleaning guarantees safe and effective solutions tailored to your needs. Trust us to maintain the cleanliness and hygiene of your space while prioritizing quality and professionalism in every service we provide. Experience the peace of mind that comes with expert cleaning you can rely on.",
       "tipos": "Segundo Block About",
       "list": [],
       "additionalImages": [
@@ -166,8 +166,8 @@
     {
       "_id": "67c8a7da1b23dcb387ebebf1",
       "section": "blocks",
-      "title": "The Trusted Experts in Safe Tree Removal and Complete Landscape Care.",
-      "text": "Enhance your outdoor space with expertly executed tree care solutions designed to promote health and safety. Our team specializes in tree trimming, removal, stump grinding, and 24/7 emergency services, ensuring your landscape remains beautiful and secure.",
+      "title": "The Trusted Experts in Complete Cleaning and Sanitizing Care.",
+      "text": "Enhance your space with expertly executed cleaning solutions designed to promote health and safety. Our team specializes in deep cleaning, sanitizing, floor care, and 24/7 emergency services, ensuring your property remains spotless and secure.",
       "tipos": "slideshow",
       "list": [],
       "additionalImages": [
@@ -181,7 +181,7 @@
       "_id": "67c8a7da1b23dcb387ebebf2",
       "section": "blocks",
       "title": "About",
-      "text": "Unlock optimal tree health and safety with our expert services. Our team provides round-the-clock emergency tree care, precise trimming, and efficient stump grinding and removal. Trust us for comprehensive tree health assessments and professional tree removal, ensuring your landscape remains safe and beautiful. Experience unparalleled service that keeps your property thriving.",
+      "text": "Unlock a cleaner, healthier space with our expert services. Our team provides round-the-clock emergency cleaning, precise sanitizing, and efficient floor care. Trust us for comprehensive cleanliness assessments and professional deep cleaning, ensuring your property remains safe and beautiful. Experience unparalleled service that keeps your space thriving.",
       "tipos": "Header About",
       "list": [],
       "additionalImages": [
@@ -192,7 +192,7 @@
       "_id": "67c8a7da1b23dcb387ebebf3",
       "section": "blocks",
       "title": "Services",
-      "text": "Transform your landscape with our comprehensive tree services, designed to enhance the health and beauty of your property. From 24/7 emergency tree services to meticulous tree trimming and efficient stump grinding, our team is equipped to meet all your tree care needs. Ensure your environment thrives with our expert tree removal and maintenance solutions. Contact us to discover how we can elevate your outdoor space.",
+      "text": "Transform your property with our comprehensive cleaning services, designed to enhance the health and cleanliness of your space. From 24/7 emergency cleanups to meticulous deep cleaning and efficient floor care, our team is equipped to meet all your cleaning needs. Ensure your environment thrives with our expert sanitizing and maintenance solutions. Contact us to discover how we can elevate your space.",
       "tipos": "Header Services",
       "list": [],
       "additionalImages": [
@@ -203,7 +203,7 @@
       "_id": "67c8a7da1b23dcb387ebebf4",
       "section": "blocks",
       "title": "Gallery",
-      "text": "Explore our stunning gallery showcasing innovative tree services. Our team utilizes advanced techniques to enhance tree health, manage emergencies, and efficiently remove trees and stumps. View our completed projects to see how we elevate landscapes and promote safety in every environment.",
+      "text": "Explore our stunning gallery showcasing innovative cleaning services. Our team utilizes advanced techniques to sanitize surfaces, manage emergencies, and efficiently deep clean every room. View our completed projects to see how we elevate spaces and promote health in every environment.",
       "tipos": "Header Gallery",
       "list": [],
       "additionalImages": [
@@ -214,7 +214,7 @@
       "_id": "67c8a7da1b23dcb387ebebf5",
       "section": "blocks",
       "title": "Contact",
-      "text": "Reach out for expert tree care solutions tailored to your needs. Our dedicated team is prepared to assist you with services like tree health assessments, emergency tree support, stump grinding, and more. Contact us now to discover how we can enhance the beauty and safety of your landscape.",
+      "text": "Reach out for expert cleaning solutions tailored to your needs. Our dedicated team is prepared to assist you with services like cleanliness assessments, emergency cleanup support, floor care, and more. Contact us now to discover how we can enhance the beauty and hygiene of your space.",
       "tipos": "Header Contact",
       "list": [],
       "additionalImages": [
@@ -282,8 +282,8 @@
     {
       "_id": "6a0b36bbb53cbe7193b8e5d7",
       "section": "home",
-      "title": "Taking Down Trees Safely, Leaving Spaces Clean.",
-      "text": "Safely remove unwanted trees while maintaining a clean environment. Our team specializes in tree health, 24/7 emergency services, stump grinding, trimming, and removal. With extensive expertise, we ensure every job is executed with precision and care, leaving your space neat and safe. Trust us to enhance your property's beauty and safety through professional tree management.",
+      "title": "Deep Cleaning, Safely Done, Spaces Left Spotless.",
+      "text": "Safely deep clean every room while maintaining a healthy environment. Our team specializes in sanitizing surfaces, 24/7 emergency cleanups, floor care, and move-in/move-out service. With extensive expertise, we ensure every job is executed with precision and care, leaving your space neat and safe. Trust us to enhance your property's cleanliness and comfort through professional cleaning management.",
       "tipos": "Primer Block Home",
       "list": [],
       "additionalImages": [
@@ -296,7 +296,7 @@
   "services": [
     {
       "_id": "6a0b7fe85eac64439f7951ff",
-      "title": "Tree Health",
+      "title": "Deep Cleaning",
       "subtitle": "",
       "showtitletext": true,
       "description": [
@@ -304,7 +304,7 @@
           "image": "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/Stock%2FTree%20Services%2FHedge%20Services-2.webp?alt=media&token=6d3c6823-9a9b-40e7-9ae7-45255fe1c00a",
           "titletext": "",
           "precio": "",
-          "text": "Enhance the vitality of your trees with our comprehensive tree health services. Our team utilizes advanced techniques and knowledge to assess and treat various tree ailments, ensuring robust growth and longevity. Trust us to revitalize your landscape, promoting healthier foliage and preventing future issues.",
+          "text": "Restore the freshness of your property with our comprehensive deep cleaning services. Our team uses advanced techniques and professional-grade products to break down built-up grime, sanitize surfaces, and extend the life of your finishes. Trust us to revitalize your space, promoting a healthier environment and preventing future buildup.",
           "tipoImages": "stock",
           "_id": "6a0b7fe85eac64439f795200"
         }
@@ -312,7 +312,7 @@
     },
     {
       "_id": "6a0b7fe85eac64439f795201",
-      "title": "24/7 Emergency Tree Services",
+      "title": "24/7 Emergency Cleaning Services",
       "subtitle": "",
       "showtitletext": true,
       "description": [
@@ -320,7 +320,7 @@
           "image": "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/Stock%2FTree%20Services%2FBrush%20Removal-1-815.webp?alt=media&token=81700e8d-1e36-455e-bd3f-5400f12f8970",
           "titletext": "",
           "precio": "",
-          "text": "Count on our 24/7 emergency tree services to handle urgent tree hazards efficiently and safely. Whether it's a fallen tree blocking your driveway or a hazardous limb threatening your property, our skilled team is equipped to respond at any hour. We prioritize your safety and peace of mind, ensuring swift and thorough solutions to protect your home and landscape.",
+          "text": "Count on our 24/7 emergency cleaning services to handle urgent messes efficiently and safely. Whether it's water damage, a flood, or an unexpected spill threatening your property, our skilled team is equipped to respond at any hour. We prioritize your safety and peace of mind, ensuring swift and thorough solutions to protect your home or business.",
           "tipoImages": "stock",
           "_id": "6a0b7fe85eac64439f795202"
         }
@@ -328,7 +328,7 @@
     },
     {
       "_id": "6a0b7fe85eac64439f795203",
-      "title": "Stump Grinding & Removal",
+      "title": "Floor Care & Restoration",
       "subtitle": "",
       "showtitletext": true,
       "description": [
@@ -336,7 +336,7 @@
           "image": "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/Stock%2FTree%20Services%2F360_F_412984025_lpLc9jKcxtkqHYmWqn44DdHfMqah1gWc.webp?alt=media&token=c0e3e5f7-c25e-4bf5-9d76-760e234534f6",
           "titletext": "",
           "precio": "",
-          "text": "Experience the advantage of expert stump grinding and removal services that eliminate unsightly stumps while enhancing your landscape's appearance. Our team utilizes advanced equipment to ensure efficient and thorough removal, promoting healthier growth for surrounding plants and improving overall property value. Trust us to restore your outdoor space to its full potential.",
+          "text": "Experience the advantage of expert floor care and restoration services that eliminate deep-set grime and stains while enhancing your property's appearance. Our team uses professional-grade equipment to ensure efficient and thorough cleaning, protecting your floors and improving overall property value. Trust us to restore your space to its full potential.",
           "tipoImages": "stock",
           "_id": "6a0b7fe85eac64439f795204"
         }
@@ -344,7 +344,7 @@
     },
     {
       "_id": "6a0b7fe85eac64439f795205",
-      "title": "Tree Trimming",
+      "title": "Residential & Commercial Cleaning",
       "subtitle": "",
       "showtitletext": true,
       "description": [
@@ -352,7 +352,7 @@
           "image": "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/Stock%2FTree%20Services%2FTree%20Pruning%20(1).jpg?alt=media&token=6cf8c28f-020a-4723-bdda-39b9df208aa8",
           "titletext": "",
           "precio": "",
-          "text": "Enhance the health and appearance of your trees with our expert tree trimming services. Our team carefully removes dead or overgrown branches, promoting stronger growth and improving the overall aesthetics of your landscape. Trust us to maintain the beauty and safety of your property while ensuring your trees thrive.",
+          "text": "Enhance the look and feel of your property with our expert residential and commercial cleaning services. Our team carefully cleans every surface, from kitchens and bathrooms to open office areas, promoting a healthier environment and improving the overall appearance of your space. Trust us to maintain the cleanliness and safety of your property.",
           "tipoImages": "stock",
           "_id": "6a0b7fe85eac64439f795206"
         }
@@ -360,7 +360,7 @@
     },
     {
       "_id": "6a0b7fe85eac64439f795207",
-      "title": "Tree Removal",
+      "title": "Move-In & Move-Out Cleaning",
       "subtitle": "",
       "showtitletext": true,
       "description": [
@@ -368,7 +368,7 @@
           "image": "https://firebasestorage.googleapis.com/v0/b/genius-tech-crm.appspot.com/o/Stock%2FTree%20Services%2FTree%20removal-2-3063.webp?alt=media&token=78ff0736-f74f-4cc4-8e78-3d88f7097175",
           "titletext": "",
           "precio": "",
-          "text": "Ensure the safety and aesthetics of your property with expert tree removal services. Our team utilizes advanced techniques to efficiently eliminate hazardous or unwanted trees, promoting healthier landscapes and enhancing curb appeal. Trust in our extensive expertise to handle your tree removal needs with professionalism and care.",
+          "text": "Ensure the hygiene and appearance of your property with expert move-in and move-out cleaning services. Our team uses a proven checklist to efficiently leave every room, cabinet, and appliance ready for its next occupant, promoting a clean start and enhancing curb appeal. Trust in our extensive expertise to handle your turnover cleaning needs with professionalism and care.",
           "tipoImages": "stock",
           "_id": "6a0b7fe85eac64439f795208"
         }

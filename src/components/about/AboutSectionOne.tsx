@@ -15,8 +15,8 @@ const AboutSection: React.FC<Props> = ({ data, aboutSection }) => {
         <section className="relative w-full py-24 lg:py-40 overflow-hidden ">
             {/* Dynamic Background Text */}
             <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-[0.03] pointer-events-none select-none overflow-hidden">
-                <span className="text-[40vw] font-black text-primary leading-none tracking-tighter uppercase transform -rotate-12 translate-y-20">
-                    Welfing
+                <span className="text-[30vw] font-black text-primary leading-none tracking-tighter uppercase transform -rotate-12 translate-y-20">
+                    Cleaning
                 </span>
             </div>
 
@@ -81,8 +81,8 @@ const AboutSection: React.FC<Props> = ({ data, aboutSection }) => {
                                             <i className="fa-solid fa-burst text-xl" />
                                         </div>
                                         <div>
-                                            <h4 className="text-slate-900 font-bold text-lg">Eco-Conscious</h4>
-                                            <p className="text-slate-500 text-sm">echnical expertise applied with passion.</p>
+                                            <h4 className="text-slate-900 font-bold text-lg">Detail Oriented</h4>
+                                            <p className="text-slate-500 text-sm">Thorough cleaning applied with passion.</p>
                                         </div>
                                     </div>
                                     <div className="flex items-center gap-5 group">

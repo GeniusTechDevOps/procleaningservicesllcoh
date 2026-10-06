@@ -39,11 +39,7 @@ const HeroSection2: React.FC<HeroSection2Props> = ({ data }) => {
 
 
 
-      {/* <img
-        src="/assets/img/leaf.png"
-        alt="leaf"
-        className="absolute left-[5%] top-[15%] w-24 h-auto object-contain opacity-40 z-10 animate-floating hidden lg:block"
-      /> */}
+      
 
       {/* Main Content Container */}
       <div className="relative z-20 h-full flex flex-col-reverse lg:flex-row items-center justify-center lg:justify-start px-6 md:px-12 lg:px-24 border">
@@ -123,7 +119,7 @@ const HeroSection2: React.FC<HeroSection2Props> = ({ data }) => {
               </div>
               <div>
                 <h3 className="text-white font-bold">Expert Care</h3>
-                <p className="text-slate-400 text-sm">Certified Arborists</p>
+                <p className="text-slate-400 text-sm">Certified Cleaning Pros</p>
               </div>
             </div> */}
           </div>

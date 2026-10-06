@@ -118,10 +118,10 @@ const HomeSectionOne: React.FC<HomeSectionOneProps> = ({ data, homeSection }) =>
             <Animated variant="fade-up" duration={"duration-700"} delay={"delay-500"}>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
                 {[
-                  { icon: "fa-shield-check", title: "Professionalism", desc: "Expert certified arborists" },
+                  { icon: "fa-shield-check", title: "Professionalism", desc: "Expert certified cleaning crews" },
                   { icon: "fa-handshake", title: "Commitment", desc: "Dedicated to your satisfaction" },
                   { icon: "fa-bolt", title: "Diligence", desc: "Fast & efficient execution" },
-                  { icon: "fa-check", title: "Commitment", desc: "Welds built to last a lifetime" }
+                  { icon: "fa-check", title: "Reliability", desc: "Results that last, guaranteed" }
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-start gap-4 p-4 rounded-2xl bg-slate-50 hover:bg-white hover:shadow-xl hover:shadow-slate-200/50 transition-all group">
                     <div className="w-12 h-12 flex-shrink-0 rounded-xl bg-white flex items-center justify-center text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors">
