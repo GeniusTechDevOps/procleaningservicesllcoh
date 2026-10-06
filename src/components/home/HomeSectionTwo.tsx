@@ -147,7 +147,7 @@ const HomeSectionTwo: React.FC<Props> = ({ data, homeSection }) => {
             {/* Floating Brand Badge */}
             <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-white px-4 lg:px-8 py-4 rounded-2xl shadow-2xl border border-slate-100 z-30 flex items-center gap-3">
               <div className="w-2 h-2 bg-secondary rounded-full animate-pulse" />
-              <span className="text-[10px] font-black uppercase tracking-widest lg:tracking-[0.2em] text-slate-900">Lincensed, Bonded & Insured</span>
+              <span className="text-[10px] font-black uppercase tracking-widest lg:tracking-[0.2em] text-slate-900">Licensed, Bonded & Insured</span>
             </div>
           </div>
 
